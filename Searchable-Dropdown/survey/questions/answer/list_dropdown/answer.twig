@@ -9,6 +9,8 @@
  * @var $dropdownSize
  * @var $checkconditionFunction
  * @var $select_show_hide
+ * @var $dropdownWidth
+ * @var $dropdown_width
  *
  */
 #}
@@ -16,8 +18,11 @@
 <!-- List Dropdown -->
 
 <!-- answer-->
+{% set search_method = (question_template_attribute.search_method is empty) ? 'contains' : question_template_attribute.search_method %}
+{% set dropdown_width = question_template_attribute.dropdown_width %}
+
 <div class="form-inline">
-    <div class="{{ coreClass }} form-group">
+    <div class="{{ coreClass }} form-group answers-full-width">
         <select
                 class="form-control list-question-select"
                 name="{{ name }}"
@@ -45,8 +50,7 @@
 <script type="text/javascript" charset="utf-8">
 
 	$(document).on('ready pjax:scriptcomplete',function(){
-		
-		initSSD('{{name}}'); 
+		initSSD('{{name}}', '{{search_method}}', '{{dropdown_width}}'); 
 		
 	});
 </script>

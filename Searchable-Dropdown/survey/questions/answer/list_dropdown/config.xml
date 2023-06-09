@@ -68,6 +68,15 @@
             <category>Display</category>
             <inputtype/>
         </attribute>
+        <attribute>
+            <name>dropdown_width</name>
+            <category>Display theme options</category>
+            <inputtype>integer</inputtype>
+            <default></default>
+            <help>Select how the elements should match the typed text.</help>
+            <caption>text number</caption>
+            <sortorder>20</sortorder>
+        </attribute>
 		
         <attribute>
             <name>other_comment_mandatory</name>
