@@ -77,6 +77,21 @@
             <caption>text number</caption>
             <sortorder>20</sortorder>
         </attribute>
+         <attribute>
+            <name>dropdown_height_class</name>
+            <category>Display theme options</category>
+            <inputtype>singleselect</inputtype>
+            <options>
+                <option>sm-select</option>
+                <option>md-select</option>
+                <option>lg-select</option>
+                <option>xl-select</option>
+            </options>
+            <default></default>
+            <help>Select the height of the element</help>
+            <caption>options</caption>
+            <sortorder>20</sortorder>
+        </attribute>
 		
         <attribute>
             <name>other_comment_mandatory</name>

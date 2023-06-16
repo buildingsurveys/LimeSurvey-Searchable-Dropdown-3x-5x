@@ -9,8 +9,8 @@
  * @var $dropdownSize
  * @var $checkconditionFunction
  * @var $select_show_hide
- * @var $dropdownWidth
  * @var $dropdown_width
+ * @var $dropdown_height_class
  *
  */
 #}
@@ -20,6 +20,10 @@
 <!-- answer-->
 {% set search_method = (question_template_attribute.search_method is empty) ? 'contains' : question_template_attribute.search_method %}
 {% set dropdown_width = question_template_attribute.dropdown_width %}
+{% set dropdown_height_class = (question_template_attribute.dropdown_height_class == 0) ? 'sm-select' :
+    (question_template_attribute.dropdown_height_class == 1) ? 'md-select' :
+    (question_template_attribute.dropdown_height_class == 2) ? 'lg-select' : 'xl-select'
+%}
 
 <div class="form-inline">
     <div class="{{ coreClass }} form-group answers-full-width">
@@ -51,7 +55,7 @@
 
 	$(document).on('ready pjax:scriptcomplete',function(){
 		initSSD('{{name}}', '{{search_method}}', '{{dropdown_width}}'); 
-		
+        initDropdownHeight('{{name}}', '{{dropdown_height_class}}');
 	});
 </script>
 <!-- end of answer  -->

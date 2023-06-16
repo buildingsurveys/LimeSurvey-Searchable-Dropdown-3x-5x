@@ -1,5 +1,4 @@
 
-
 function initSSD(sgq, searchMode, dropdownWidth) {
 	var sgqArr = sgq.split('X');
 	var qID = sgqArr[2];
@@ -13,6 +12,13 @@ function initSSD(sgq, searchMode, dropdownWidth) {
 
 	// Initiate select2
 	$('select.form-control', thisQuestion).select2(config);
+}
+
+function initDropdownHeight(questionName, heightClass) {
+	$(`.select2-container`).on('click', function() {
+		$('.select2-results > .select2-results__options')
+			.first().addClass(heightClass);	
+	});
 }
 
 function stripDiacritics (text) {
