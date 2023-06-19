@@ -82,13 +82,13 @@
             <category>Display theme options</category>
             <inputtype>singleselect</inputtype>
             <options>
-                <option>sm-select</option>
-                <option>md-select</option>
-                <option>lg-select</option>
-                <option>xl-select</option>
+                <option>small</option>
+                <option>medium</option>
+                <option>large </option>
+                <option>extra large</option>
             </options>
             <default></default>
-            <help>Select the height of the element</help>
+            <help>Select the height of the input element</help>
             <caption>options</caption>
             <sortorder>20</sortorder>
         </attribute>
